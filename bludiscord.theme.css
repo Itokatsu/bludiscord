@@ -589,13 +589,12 @@ input[type=checkbox]:checked+span{
 /*@TODO fix buttons under it */
 .chat form [class^=typing] {
 	margin-bottom: 42px;
-	margin-right: 1%;
 	display: inline-block;
 	background-color: transparent!important;
 	text-align: right;
 	pointer-events: none!impoortant
 }
-.chat form .typing span {
+.chat form [class^=typing] span {
 	display: inline-block;
 	margin-right: 1%;
 }
