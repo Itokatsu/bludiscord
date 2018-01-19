@@ -1,7 +1,7 @@
 /* This is a theme for discord, please refer to the README for instructions
  * 
  * Name: Bludiscord
- * Date: 2017-12-29
+ * Date: 2018-01-19
  * Author: Itokatsu
  * Repo: https://github.com/Itokatsu/bludiscord
  * /
@@ -477,10 +477,10 @@ input[type=checkbox]:checked+span{
 	color: rgb(var(--bg-color))!important;
 }
 /* embed */
-.theme-dark .message-group .embed-wrapper .embed-color-pill {
-	background-color: rgb(var(--blue));
+[class^=embedPill-] {
+	background-color: rgb(var(--skyblue))!important;
 }
-.theme-dark .message-group .embed {
+.message-group] .embed {
 	border-color: rgb(var(--blue));
 }
 /* blocks */
@@ -587,8 +587,9 @@ input[type=checkbox]:checked+span{
 
 /*typing notification */
 /*@TODO fix buttons under it */
-.chat form .typing{
-	margin-bottom: 50px;
+.chat form [class^=typing] {
+	margin-bottom: 42px;
+	margin-right: 1%;
 	display: inline-block;
 	background-color: transparent!important;
 	text-align: right;
