@@ -1,7 +1,7 @@
 /* This is a theme for discord, please refer to the README for instructions
  * 
  * Name: Bludiscord
- * Date: 2018-01-19
+ * Date: 2018-01-20
  * Author: Itokatsu
  * Repo: https://github.com/Itokatsu/bludiscord
  * /
@@ -19,6 +19,7 @@
 	--highlight-color: 201, 44, 125;	/* #C92C7D */
 	--white: 220, 221, 222;			/* #DCDDDE */
 	--grey: 80, 85, 85;			/* #505555 */
+	--border: 54, 73 , 89;
 }
 
 #app-mount,
@@ -26,7 +27,7 @@
 	background-color: rgb(var(--dark-blue))!important;
 }
 
-/** remove stuff **/
+/** femove stuff **/
 /* remove Nitro tab*/
 .itemBrand-mC9YR4, .itemBrand-mC9YR4 + .separator-3z7STW {
 	display: none;
@@ -472,7 +473,7 @@ input[type=checkbox]:checked+span{
 	background-color: rgb(var(--bg-color))!important
 }
 /* bot tag */
-.bot-tag, [class^=botTagInvert] {
+[class^=botTag] {
 	background-color: rgb(var(--skyblue))!important;
 	color: rgb(var(--bg-color))!important;
 }
@@ -692,20 +693,44 @@ input[type=checkbox]:checked+span{
 }
 
 /*popout*/
-.popout section,
-.context-menu, 
-.context-menu .item-subMenu {
+.tooltip,
+.small-popout-box,
+[class^=contextMenu],
+[class^=contextMenu] .itemSubMenu-3ZgIw- {
 	background-color: rgb(var(--dark-blue))!important;
 }
+
+.tooltip,
+.small-popout-box,
+[class^=contextMenu] {
+	border : 1px solid rgb(var(--border));
+}
+.tooltip-top:after {
+	border-top-color: rgb(var(--border))!important;
+}
+.tooltip-right:after {
+	border-right-color: rgb(var(--border))!important;
+}
+.tooltip-bottom:after {
+	border-bottom-color: rgb(var(--border))!important;
+}
+.tooltip-left:after {
+	border-left-color: rgb(var(--border))!important;
+}
+
 #autocomplete-popout .row.selected,
 #autocomplete-popout .row:hover,
-.context-menu .item:hover {
-	background-color: rgba(var(--blue),0.3)!important;
+[class^=contextMenu] [class^=item-]:hover,
+.small-popout-box .btn-item:hover {
+	background-color: rgba(var(--blue), 0.3)!important;
+	color: rgb(var(--white)) ;
 }
+
 .popout header {
 	background-color: rgb(var(--accent-color2))!important;
 	color: rgb(var(--white))!important;
 }
+
 .scrollerThemed-19vinI.themeLight-1WK0Av.scrollerTrack-3hhmU0>.scroller-fzNley::-webkit-scrollbar-track, 
 .theme-dark .scrollerThemed-19vinI.themeLight-1WK0Av.scrollerTrack-3hhmU0>.scroller-fzNley::-webkit-scrollbar-track, 
 .theme-light .scrollerWrap-2uBjct.scrollerTrack-3hhmU0>.scroller-fzNley::-webkit-scrollbar-track {
@@ -714,17 +739,18 @@ input[type=checkbox]:checked+span{
 
 
 /** po menus **/
-.popout-menu {
+.popout [class^=menu] {
 	background-color: rgb(var(--dark-blue))!important;
+	border: 1px solid rgb(var(--border));
 }
-.popout-menu .popout-menu-separator {
+.popout [class^=separator] {
 	border-bottom-color: rgb(var(--grey))!important;
 }
-.popout-menu .popout-menu-item:hover {
+.popout [class^=item]:hover {
 	background-color: rgb(var(--accent-color2))!important;
 	color: rgb(var(--white))!important;
 }
-.popout-menu .popout-menu-item:hover .helper {
+.popout [class^=item]:hover [class^=helper] {
 	color: inherit!important;
 }
 
@@ -752,6 +778,7 @@ input[type=checkbox]:checked+span{
 	box-shadow: none;
 	color: red!important;
 }
+
 
 /* search popout */
 .search-popout {
