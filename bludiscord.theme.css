@@ -559,6 +559,17 @@ input[type=checkbox]:checked+span{
 	padding-top: 4px;
 	margin-top: 4px;
 }
+[class^=emojiButton] {
+	bottom: 8px;
+}
+
+[class^=spriteNormal],
+[class^=spriteHovered] {
+	background-image: url(/assets/fcf4e109bf6d561ae3cc2d52a5a88936.svg);
+	background-repeat: no-repeat;
+	background-size: 20px 20px!important;
+	background-position: 0 0!important;
+}
 
 .chat form textarea,
 .edit-message textarea {
@@ -567,16 +578,9 @@ input[type=checkbox]:checked+span{
 	border-radius: 3px;
 	border: 2px solid rgb(var(--border))!important;
 }
-
-[class^=emojiButton] {
-	top: 8px;
-}
-[class^=spriteNormal],
-[class^=spriteHovered] {
-	background-image: url(/assets/fcf4e109bf6d561ae3cc2d52a5a88936.svg);
-	background-repeat: no-repeat;
-	background-size: 20px 20px!important;
-	background-position: 0 0!important;
+.edit-message textarea {
+	padding: 4px 10px 4px 10px!important;
+	border: 2px solid rgb(var(--blue))!important;
 }
 
 /*typing notification */
