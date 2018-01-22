@@ -565,7 +565,7 @@ input[type=checkbox]:checked+span{
 
 [class^=spriteNormal],
 [class^=spriteHovered] {
-	background-image: url(htpps://discordapp.com/assets/fcf4e109bf6d561ae3cc2d52a5a88936.svg);
+	background-image: url(https://discordapp.com/assets/fcf4e109bf6d561ae3cc2d52a5a88936.svg);
 	background-repeat: no-repeat;
 	background-size: 20px 20px!important;
 	background-position: 0 0!important;
