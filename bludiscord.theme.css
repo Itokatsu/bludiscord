@@ -1,7 +1,7 @@
 /* This is a theme for discord, please refer to the README for instructions
  * 
  * Name: Bludiscord
- * Date: 2018-01-20
+ * Date: 2018-01-22
  * Author: Itokatsu
  * Repo: https://github.com/Itokatsu/bludiscord
  * /
@@ -217,6 +217,11 @@ input[type=checkbox]:checked+span{
 	color: rgb(var(--skyblue))!important;
 }
 
+.search .search-bar {
+	background-color: rgba(var(--bg-color),0.8)!important;
+	border: 1px solid rgb(var(--border))!important;
+}
+
 [class^=channels-] {
 	background-color: rgb(var(--bg-color));
 }
@@ -270,7 +275,7 @@ input[type=checkbox]:checked+span{
 	padding-bottom: 6px;
 	margin-bottom: 6px;
 }
-[class^=containerDefault-]:first-child:after {
+[class^=containerDefault]:first-child:after {
 	content: '';
 	position: absolute;
 	bottom: 0px;
@@ -280,18 +285,25 @@ input[type=checkbox]:checked+span{
 }
 
 [class^=containerDefault-]:first-child [class^=nameDefault-] {
-	color: rgba(var(--skyblue),0.6);
+	color: rgb(var(--skyblue));
 }
+
 [class^=containerDefault-]:first-child [class^=nameCollapsed-] {
-	color: rgb(var(--grey));
+	color: rgba(var(--skyblue),0.3);
 }
+
 [class^=containerDefault-]:first-child svg {
 	fill: rgb(var(--skyblue));
-	opacity: 0.6;
+	opacity: 0.8;
 }
+
+[class^=containerDefault-]:first-child .wrapperCollapsed-18mf-c svg {
+	opacity: 0.3!important;
+}
+
 [class^=containerDefault-]:first-child:hover *{
-	color: rgb(var(--accent-soft));
-	fill: rgb(var(--accent-soft));
+	color: rgb(var(--blue));
+	fill: rgb(var(--blue));
 	opacity: 1;
 }
 
@@ -395,49 +407,6 @@ input[type=checkbox]:checked+span{
 	border-bottom: 1px solid rgb(var(--skyblue));
 }
 
-
-/*usercards*/
-[class^=userPopout] [class^=headerNormal] {
-	background-color: rgb(var(--dark-blue));
-    border-bottom: solid rgb(var(--grey)) 1px;
-}
-[class^=userPopout] .username, 
-[class^=userPopout] .discriminator {
-    color: rgb(var(--accent-color))!important
-}
-
-[class^=userPopout] [class^=body-],
-[class^=userPopout] [class^=footer-] {
-	background-color: rgb(var(--dark-blue));
-	border-color: rgb(var(--grey));
-}
-.quick-message {
-	background-color: rgba(var(--bg-color), 0.8)!important;
-	border-color: rgb(var(--bg-color))!important;
-	color: rgb(var(--white))!important;
-}
-[class^=userPopout] [class^=bodyTitleText-],
-[class^=userPopout] [class^=headerText-],
-[class^=userPopout] [class*=IconForeground] {
-	color: rgb(var(--white))!important;
-	fill: rgb(var(--white))!important;
-}
-[class^=bodyDivider] {
-	background-color: rgb(var(--grey));
-}
-
-.member-roles .member-role {
-	background-color: rgba(var(--accent-color2), 0.7);
-	border-color: rgba(var(--accent-color2), 0.3);
-}
-.member-roles .member-role:hover {
-	background-color: rgb(var(--accent-color2));
-}
-
-/* note */
-[class^=userPopout] .note textarea:focus {
-    background-color: rgba(var(--bg-color), 0.5)!important;
-}
 
 /**
 * Friends 
@@ -570,20 +539,44 @@ input[type=checkbox]:checked+span{
 **/
 /*@TODO better selector */
 .chat form {
+	background-color: rgb(var(--bg-color))!important;
+	height: 60px;
+}
+
+.chat form>div {
+	margin: 0px;
+	margin-top: 15px;
+}
+
+.chat form [class^=attachButton] {
+	display: none;
+}
+
+.chat form textarea {
 	background-color: rgb(var(--dark-blue))!important;
-	border-top: 0px;
-	margin: 3px 8px;
-}
-.theme-dark .inner-3if5cm {
-	background: inherit;
-}
-
-[class^=channelTextArea] {
-	margin: 0;
+	padding-left: 1em;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	margin-top: 4px;
 }
 
+.chat form textarea,
 .edit-message textarea {
 	background-color: rgb(var(--dark-blue))!important;
+	margin: 0px;
+	border-radius: 3px;
+	border: 2px solid rgb(var(--border))!important;
+}
+
+[class^=emojiButton] {
+	top: 8px;
+}
+[class^=spriteNormal],
+[class^=spriteHovered] {
+	background-image: url(/assets/fcf4e109bf6d561ae3cc2d52a5a88936.svg);
+	background-repeat: no-repeat;
+	background-size: 20px 20px!important;
+	background-position: 0 0!important;
 }
 
 /*typing notification */
@@ -617,6 +610,10 @@ input[type=checkbox]:checked+span{
 /** autocomplete **/
 [class^=autocompleteInner-],
 .autocomplete-scroller {
+	border-width: 1px;
+	border-bottom-width: 0px;
+	border-style: solid;
+	border-color: rgb(var(--border));
 	background-color: rgb(var(--dark-blue));
 }
 [class^=selectorSelected-] {
@@ -699,10 +696,10 @@ input[type=checkbox]:checked+span{
 [class^=contextMenu] .itemSubMenu-3ZgIw- {
 	background-color: rgb(var(--dark-blue))!important;
 }
-
 .tooltip,
 .small-popout-box,
-[class^=contextMenu] {
+[class^=contextMenu],
+.popout [class^=menu] {
 	border : 1px solid rgb(var(--border));
 }
 .tooltip-top:after {
@@ -737,14 +734,12 @@ input[type=checkbox]:checked+span{
 	display: none;
 }
 
-
 /** po menus **/
 .popout [class^=menu] {
 	background-color: rgb(var(--dark-blue))!important;
-	border: 1px solid rgb(var(--border));
 }
 .popout [class^=separator] {
-	border-bottom-color: rgb(var(--grey))!important;
+	border-bottom-color: rgb(var(--border))!important;
 }
 .popout [class^=item]:hover {
 	background-color: rgb(var(--accent-color2))!important;
@@ -754,8 +749,8 @@ input[type=checkbox]:checked+span{
 	color: inherit!important;
 }
 
-.theme-dark .themed-popout,
-.theme-dark .themed-popout .footer,
+.themed-popout,
+.themed-popout .footer,
 .messages-popout .message-group {
 	background-color: rgb(var(--bg-color))!important;
 }
@@ -779,6 +774,52 @@ input[type=checkbox]:checked+span{
 	color: red!important;
 }
 
+
+/*usercards*/
+[class^=userPopout] {
+	border-radius: 0px;
+	border: 1px solid rgb(var(--border));
+}
+[class^=userPopout] [class^=body],
+[class^=userPopout] [class^=footer],
+[class^=userPopout] [class^=header] {
+	background-color: rgb(var(--dark-blue))!important;
+}
+
+[class^=activityUserPopout] [class^=headerText],
+[class^=userPopout] [class^=bodyTitle] {
+	color: rgb(var(--accent-soft))!important;
+	fill: rgb(var(--accent-color2))!important;
+}
+[class^=userPopout] [class^=headerName],
+[class^=userPopout] .username, 
+[class^=userPopout] .discriminator {
+    color: rgb(var(--accent-color))!important
+}
+
+[class^=userPopout] textarea {
+	background-color: rgba(var(--border),0.2);
+}
+[class^=userPopout] textarea:focus {
+	background-color: rgba(var(--border),0.6)!important;
+}
+[class^=userPopout] [class^=quickMessage] {
+	background-color: rgba(var(--bg-color), 0.8);
+	border-color: rgb(var(--border));
+	color: rgb(var(--white));
+}
+[class^=userPopout] [class^=quickMessage]:focus {
+	border-color: rgb(var(--blue))!important;
+}
+
+[class^=userPopout] [class^=role],
+[class^=userPopout] button {
+	border-radius: 0px;
+	color: rgb(var(--white))!important;
+}
+[class^=userPopout] button {
+	border-color: rgb(var(--border))!important;
+}
 
 /* search popout */
 .search-popout {
@@ -879,6 +920,7 @@ input[type=checkbox]:checked+span{
 .channel-notification-settings:last-of-type {
     border-bottom : 0px;
 }
+
 /* instant invite */
 .form.deprecated [class^=form-] {
 	background-color: rgb(var(--bg-color))!important;
@@ -976,6 +1018,10 @@ input[type=checkbox]:checked+span{
 	color: rgb(var(--white));
 }
 
+.noChannel-2EQ0a9 {
+	background: rgb(var(--bg-color))!important;
+}
+
 /*
 ** emoji picker
 */
@@ -993,4 +1039,3 @@ input[type=checkbox]:checked+span{
 .emoji-picker .scroller .emoji-item.selected {
     background-color: rgb(var(--accent-color))!important;
 }
-
