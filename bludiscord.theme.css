@@ -2,7 +2,7 @@
  * please refer to the README for instructions
  * 
  * Name: Bludiscord
- * Date: 2018-01-30
+ * Date: 2018-01-31
  * Author: Itokatsu
  * Repo: https://github.com/Itokatsu/bludiscord
 */
@@ -66,29 +66,32 @@
 		4.1.3 Body
 	4.2 User profile
 -----------------------------------------------------	
-5 Friend Screen
-	5.1 PM Channels
-		5.1.1 Generic Channels
-		5.1.2 Current Channel
-		5.1.3 Search Bar
-	5.2 Friend List
-		5.2.1 Header
-		5.2.2 Add Friend
-		5.2.3 List
+5 Search Panel
 -----------------------------------------------------	
-6 Popout
-	6.1 Generics
-	6.2 Context Menu
-	6.3 Popout Menu
-	6.4 Themed Popout
+6 Friend Screen
+	6.1 PM Channels
+		6.1.1 Generic Channels
+		6.1.2 Current Channel
+		6.1.3 Search Bar
+	6.2 Friend List
+		6.2.1 Header
+		6.2.2 Add Friend
+		6.2.3 List
 -----------------------------------------------------	
-7 Fullscreen menu
-	7.1 Backdrop
-		7.1.1 Channel Settings
-		7.1.2 Create Join/Guild
-		7.1.3 Channel Title
-		7.1.4 Help
-	7.2 Settings
+7 Popout
+	7.1 Generics
+	7.2 Context Menu
+	7.3 Popout Menu
+	7.4 Themed Popout
+	7.5 Search Filters
+-----------------------------------------------------	
+8 Fullscreen menu
+	8.1 Backdrop
+		8.1.1 Channel Settings
+		8.1.2 Create Join/Guild
+		8.1.3 Channel Title
+		8.1.4 Help
+	8.2 Settings
 
 =====================================================
 ================================================= END */
@@ -334,6 +337,12 @@
   color: #dcddde;
   text-shadow: #6897bd 0px 1px;
   box-shadow: none; }
+
+/* Channel Notice */
+.channelNotice-cQsVXw {
+  background-color: rgba(255, 255, 255, 0.1) !important; }
+  .channelNotice-cQsVXw button {
+    background-color: #3b6082 !important; }
 
 /* 2.2 Categories */
 .iconDefault-xzclSQ, .nameDefault-Lnjrwm {
@@ -775,7 +784,42 @@ code.inline {
   background: #355674 !important; }
 
 /**
- 5 Friend Screen
+ 5 Search Result Panel
+**/
+.search-results-wrap {
+  background-color: #0f2d44 !important; }
+
+/* 5.1 Header */
+.search-results-wrap .search-header {
+  background-color: #0c2437 !important; }
+  .search-results-wrap .search-header .tab.selected, .search-results-wrap .search-header .tab:hover {
+    color: #6897bd !important;
+    border-color: #6897bd !important; }
+
+/* 5.2 Body */
+/* Separator */
+.search-results-wrap .channel-separator .channel-name {
+  background-color: #0f2d44 !important;
+  color: #6897bd !important; }
+
+.search-results-wrap .search-result:before, .search-results-wrap .search-result:after {
+  background-image: none !important; }
+.search-results-wrap .search-result .search-result-message.hit {
+  background-color: #123550;
+  border: 1px solid #364959 !important;
+  box-shadow: none;
+  -webkit-box-shadow: none; }
+.search-results-wrap .search-result .action-buttons .jump-button {
+  background-color: #4a7ea8; }
+
+.search-results-wrap .search-result.expanded {
+  border-color: #364959 !important;
+  background-color: #2b465f !important; }
+  .search-results-wrap .search-result.expanded .search-result-message.hit {
+    background-color: #3b6082 !important; }
+
+/**
+ 6 Friend Screen
  **/
 .private-channels header {
   color: #6897bd;
@@ -784,14 +828,14 @@ code.inline {
 .channel.btn-friends {
   opacity: 1; }
 
-/* 5.1 PM Channels */
-/* 5.1.1 Generic Channels */
+/* 6.1 PM Channels */
+/* 6.1.1 Generic Channels */
 .private-channels .channel a {
   border-left: 6px solid transparent !important; }
 .private-channels .channel:hover .channel-name {
   color: #b9bbbe; }
 
-/* 5.1.2 Current Channel */
+/* 6.1.2 Current Channel */
 .private-channels .channel.selected {
   /* no change */ }
   .private-channels .channel.selected a {
@@ -800,7 +844,7 @@ code.inline {
       font-weight: 600;
       color: inherit; }
 
-/* 5.1.3 Search Bar */
+/* 6.1.3 Search Button */
 .private-channels .search-bar {
   height: 32px;
   box-shadow: none;
@@ -808,12 +852,12 @@ code.inline {
   .private-channels .search-bar .search-bar-inner {
     background-color: #335370; }
 
-/* 5.2 Friend List */
+/* 6.2 Friend List */
 .friends-table,
 #friends {
   background-color: #123550 !important; }
 
-/* 5.2.1 Header */
+/* 6.2.1 Header */
 .headerBar-cxbhPD {
   background-color: #0f2d44 !important;
   border-left: 1px solid #364959 !important; }
@@ -825,7 +869,7 @@ code.inline {
   background: #d69240 !important;
   color: white !important; }
 
-/* 5.2.2 List */
+/* 6.2.2 List */
 #friends .friends-row .friends-action {
   background-color: #7396b2 !important; }
 
@@ -833,9 +877,9 @@ code.inline {
   background-color: #5d98c8 !important; }
 
 /** 
- 6 Popouts
+ 7 Popouts
  **/
-/* 6.1 Generic Tooltips */
+/* 7.1 Generic Tooltips */
 .tooltip.tooltip-red {
   background-color: #630808 !important;
   border-color: #f04747; }
@@ -864,13 +908,13 @@ code.inline {
 .tootlip-left.tooltip-red:after {
   border-left-color: #f04747 !important; }
 
-/* 6.2 Context Menu */
+/* 7.2 Context Menu */
 .contextMenu-uoJTbz .itemSubMenu-3ZgIw- {
   background-color: #0c2437; }
 .contextMenu-uoJTbz .item-1XYaYf:hover.danger-1oUOCl {
   background-color: rgba(240, 71, 71, 0.7) !important; }
 
-/* 6.3 Popout Menu */
+/* 7.3 Popout Menu */
 .popout .menu-3BZuDT .separator-1hpa3S {
   border-color: #364959; }
 
@@ -987,9 +1031,9 @@ code.inline {
       background-color: #355674 !important; }
 
 /**
- 7 Fullscreen menu 
+ 8 Fullscreen menu 
  **/
-/* 7.1 Backdrop screens */
+/* 8.1 Backdrop screens */
 .backdrop-2ohBEd {
   background-color: #03090d !important; }
 
@@ -1020,7 +1064,7 @@ code.inline {
 .Select-option {
   background: #091926 !important; }
 
-/* 7.1.1 Channel Settings */
+/* 8.1.1 Channel Settings */
 .inner-1_1f7b h4, .inner-1_1f7b h5 {
   color: #d69240 !important; }
 .inner-1_1f7b input[type=text] {
@@ -1048,7 +1092,7 @@ code.inline {
   .inner-1_1f7b input[type=checkbox]:checked + span {
     border-color: #364959 !important; }
 
-/* 7.1.2 Create/Join Guild */
+/* 8.1.2 Create/Join Guild */
 .form.deprecated .form-inner,
 .form.deprecated .form-inner .action {
   /* Create */ }
@@ -1070,11 +1114,11 @@ code.inline {
   background-color: #0c2437 !important;
   border-color: #364959; }
 
-/* 7.1.3 Channel Title */
+/* 8.1.3 Channel Title */
 .modal-3HOjGZ {
   background-color: #0c2437 !important; }
 
-/* 7.1.4 Help */
+/* 8.1.4 Help */
 .need-help-modal.deprecated .footer,
 .need-help-modal.deprecated .header {
   border-color: #364959; }
