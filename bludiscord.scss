@@ -2,7 +2,7 @@
  * please refer to the README for instructions
  * 
  * Name: Bludiscord
- * Date: 2018-01-31
+ * Date: 2018-02-06
  * Author: Itokatsu
  * Repo: https://github.com/Itokatsu/bludiscord
 */
@@ -913,9 +913,7 @@ code.inline {
 }
 
 /* 4.2 User Profile */
-.topSectionNormal-2LlRG1,
-.topSectionPlaying-3jAH9b,
-.topSectionStreaming-3rIBIm {
+[class^=topSection] {
 	background-color: inherit;
 	.username, .discriminator {
 		color: desaturate($accent-color,30) !important;
@@ -952,6 +950,27 @@ code.inline {
 }
 .listRow-1wEi-U:hover {
 	background: $hover-bg !important;
+}
+
+/* 4.3 Loading */
+/* #123550 */
+
+.channel-members-loading .heading {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iNTAiPjxwYXRoIGZpbGw9IiMxMjM1NTAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMGgyNDB2NTBIMFYwem0zMCAzNGMwLTMuMzE0IDIuNjktNiA2LjAwMy02aDUzLjk5NEM5My4zMTIgMjggOTYgMzAuNjkzIDk2IDM0YzAgMy4zMTQtMi42OSA2LTYuMDAzIDZIMzYuMDAzQzMyLjY4OCA0MCAzMCAzNy4zMDcgMzAgMzR6Ii8+PC9zdmc+DQo=") !important;
+}
+
+.channel-members-loading .member {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iNDAiPjxwYXRoIGZpbGw9IiMxMjM1NTAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMGgyNDB2NDBIMFYwem0zMCAyMGMwLTguMjg0IDYuNzE0LTE1IDE1LTE1IDguMjg0IDAgMTUgNi43MTQgMTUgMTUgMCA4LjI4NC02LjcxNCAxNS0xNSAxNS04LjI4NCAwLTE1LTYuNzE0LTE1LTE1em00MCAwYzAtMi43NiAyLjIzLTUgNC45OTMtNWg5MC4wMTRjMi43NTcgMCA0Ljk5MyAyLjI0NCA0Ljk5MyA1IDAgMi43Ni0yLjIzIDUtNC45OTMgNUg3NC45OTNDNzIuMjM2IDI1IDcwIDIyLjc1NiA3MCAyMHoiLz48L3N2Zz4=") !important;
+}
+
+.channel-members-loading .member:nth-child(3n+2), 
+.channel-members-loading .member:nth-child(7n+4) {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iNDAiPjxwYXRoIGZpbGw9IiMxMjM1NTAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMGgyNDB2NDBIMFYwem0zMCAyMGMwLTguMjg0IDYuNzE0LTE1IDE1LTE1IDguMjg0IDAgMTUgNi43MTQgMTUgMTUgMCA4LjI4NC02LjcxNCAxNS0xNSAxNS04LjI4NCAwLTE1LTYuNzE0LTE1LTE1em00MCAwYzAtMi43NiAyLjI0LTUgNS4wMDMtNWgxMDUuOTk0YzIuNzYzIDAgNS4wMDMgMi4yNDQgNS4wMDMgNSAwIDIuNzYtMi4yNCA1LTUuMDAzIDVINzUuMDAzQzcyLjI0IDI1IDcwIDIyLjc1NiA3MCAyMHoiLz48L3N2Zz4NCg==") !important;
+}
+
+.channel-members-loading .member:nth-child(2n-4),
+.channel-members-loading .member:nth-child(7n-1) {
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDAiIGhlaWdodD0iNDAiPjxwYXRoIGZpbGw9IiMxMjM1NTAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTAgMGgyNDB2NDBIMFYwem0zMCAyMGMwLTguMjg0IDYuNzE0LTE1IDE1LTE1IDguMjg0IDAgMTUgNi43MTQgMTUgMTUgMCA4LjI4NC02LjcxNCAxNS0xNSAxNS04LjI4NCAwLTE1LTYuNzE0LTE1LTE1em00MCAwYzAtMi43NiAyLjI0Ny01IDUtNWg4MGMyLjc2MiAwIDUgMi4yNDQgNSA1IDAgMi43Ni0yLjI0NyA1LTUgNUg3NWMtMi43NjIgMC01LTIuMjQ0LTUtNXoiLz48L3N2Zz4NCg==") !important;
 }
 
 /**
