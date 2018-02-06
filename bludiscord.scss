@@ -275,9 +275,9 @@ $guild-accent-color: $accent-color2;
 }
 .friends-online {
 	color:$guild-accent-color !important;
-	text-align: left !important;
 	font-weight: bolder !important;
-	background-position: 50% 50%;
+	width: $guildp-width !important;
+	margin-left: -$guildp-margin !important;
 }
 .guild-separator:after {
 	background: $guild-accent-color !important;
