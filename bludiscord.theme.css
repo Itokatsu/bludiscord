@@ -217,9 +217,9 @@
 
 .friends-online {
   color: #3b6082 !important;
-  text-align: left !important;
   font-weight: bolder !important;
-  background-position: 50% 50%; }
+  width: 60px !important;
+  margin-left: -10.5px !important; }
 
 .guild-separator:after {
   background: #3b6082 !important;
