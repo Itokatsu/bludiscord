@@ -2,7 +2,7 @@
  * please refer to the README for instructions
  * 
  * Name: Bludiscord
- * Date: 2018-02-06
+ * Date: 2018-02-24
  * Author: Itokatsu
  * Repo: https://github.com/Itokatsu/bludiscord
 */
@@ -195,6 +195,11 @@ $hover-color: #b9bbbe;
 	border-color: darken($bg-color, 2) !important;
 	background-color: $accent-color2 !important;
 }
+
+hr {
+	border-color: $border-color !important;
+}
+
 /**
  1 Guild List 
  **/
@@ -402,7 +407,7 @@ $guild-accent-color: $accent-color2;
 /**
  2 Channel List 
  **/
-$channelp-bg: darken($bg-color, 3);
+$channelp-bg: darken($bg-color, 2);
 .channels-3g2vYe {
 	background-color: $channelp-bg !important;
 }
@@ -691,7 +696,8 @@ code.inline {
 .embedPill-3sYS1X {
 	background-color: $skyblue !important;
 }
-.embedInner-t4ag7g {
+.embedInner-t4ag7g,
+.theme-dark .attachment-1Vom9D {
 	background-color: rgba(black, 0.2) !important;
 	border-color: $border-color !important;
 	.imageWrapper-38T7d9 {
@@ -708,6 +714,11 @@ code.inline {
 }
 .iconActiveLarge-3wrcgc {
 	@extend %avatars;
+}
+
+.resolvingBackground-31eGqp {
+	background-image: none !important;
+	background-color: darken($dark-bg,2) !important;
 }
 
 /* 3.4 Input Bar */
@@ -824,75 +835,78 @@ code.inline {
 }
 
 /* 4.1 Usercard */
-.userPopout-4pfA0d {
-	@extend %popout;
-}
 
-/* 4.1.1 Header */
-.userPopout-4pfA0d .header-3mZJcV {
-	background-color: inherit !important;
-	border-bottom: 1px solid $border-color;
-
-	.headerName-2N8Pdz {
-		font-weight: bolder;
-		color: $accent-color !important;
-	}
-	.username, 
-	.discriminator {
-	    color: $accent-color !important;
-	}
-}
 /* Avatars */
 .image-EVRGPw,
-.avatarHint-2i5XWK {
+.avatarHint-2ohlkz {
 	@extend %avatars;
 	mask: none!important;
 	-webkit-mask: none!important;
 	margin: 0px;
 }
 
-/* 4.1.2 Activity */
-.activity-AFBUEw {
-	border-top: 1px solid $border-color;
-	background-color: lighten($dark-bg, 2);
+.userPopout-11hFKo {
+	@extend %popout;
 
-	.headerText-2CVBxK {
-		color: $skyblue !important;
-	}
-
-	button {
-		background-color: $accent-color2;
-		color: darken(white, 20);
-		border: 2px solid $border-color !important;
-		&:hover {
-			border-color: $blue !important;
+	/* 4.1.1 Header */
+	.header-3budic {
+		background-color: inherit !important;
+		border-bottom: 1px solid $border-color;
+		.headerName-2N8Pdz {
+			font-weight: bolder;
+			color: $accent-color !important;
+		}
+		.username, 
+		.discriminator {
+		    color: $accent-color !important;
 		}
 	}
-}
 
-/* 4.1.3 Body */
-.body-3rkFrF,
-.footer-2J5zqP {
-	background-color: inherit !important;
-}
-.bodyTitle-yehI7c {
-	color: desaturate($accent-color,30) !important;
-}
+	/* 4.1.2 Activity */
+	.activity-3NviKQ {
+		border-top: 1px solid $border-color;
+		background-color: lighten($dark-bg, 2);
 
-/* Roles */
-.userPopout-4pfA0d .role-3rahR_,
-.userPopout-4pfA0d button {
-	border-radius: 0px;
+		.headerText-2CVBxK {
+			color: $skyblue !important;
+		}
+
+		button {
+			background-color: $accent-color2;
+			color: darken(white, 20);
+			border: 1px solid $border-color !important;
+			&:hover {
+				background-color: saturate($accent-color2, 15) !important;
+			}
+		}
+	}
+
+	/* 4.1.3 Body */
+	.body-3ljq11,
+	.footer-2wFs91 {
+		background-color: inherit !important;
+	}
+	.bodyTitle-18hsd9 {
+		color: desaturate($accent-color,30) !important;
+	}
+
+	/* Roles */
+	.role-3rahR_,
+	button {
+		border-radius: 0px;
+	}
+
 }
 
 /* Add Role popout */
 .autocomplete-header-background {
-	background-color: lighten($dark-bg, 3) !important;
+	background-color: lighten($dark-bg, 2) !important;
 	border: 1px solid $border-color;
 }
 
 .row.selected {
 	@extend %hover-item;
+	background: $hover-bg !important;
 }
 
 /* Notes */
@@ -1018,6 +1032,12 @@ code.inline {
 	.search-result-message.hit {
 		background-color: $accent-color2 !important;
 	}
+}
+
+/* Pagination */
+.search-results-wrap .pagination .pagination-next, 
+.search-results-wrap .pagination .pagination-previous {
+	background-color: lighten($dark-bg, 15) !important;
 }
 
 /**
@@ -1156,6 +1176,22 @@ $directions: top right bottom left;
 	}
 }
 
+.popout {
+	header {
+		@extend %popout;
+		color: $accent-color;
+	}
+	section {
+		@extend %popout;
+		border-top: 0px;
+	}
+}
+
+.popout.popout-top-right section:after, 
+.popout.popout-top section:after {
+	border-top-color: $border-color;
+}
+
 /* 7.4 Themed popouts */
 .popout .themed-popout {
 	@extend %popout;
@@ -1187,7 +1223,7 @@ $directions: top right bottom left;
 		background-color: transparent !important;
 	}
 	&:hover .action-buttons {
-		box-shadow: 0 0 6px 4px darken($dark-bg,3) !important;
+		box-shadow: 0 0 6px 4px darken($dark-bg,2) !important;
 		background-color: $dark-bg !important;
 	}
 }
@@ -1288,10 +1324,11 @@ $directions: top right bottom left;
 	.react-datepicker__navigation.react-datepicker__navigation--next,
 	.react-datepicker__navigation.react-datepicker__navigation--previous {
 		border-color: $border-color !important;
+		background-color: lighten($dark-bg, 10) !important;
 	}
 	.react-datepicker__header {
 		background: $dark-bg !important;
-		border-color: $border-color !important;
+		border-color: $accent-color2 !important;
 
 		.react-datepicker__current-month {
 			color: $skyblue !important;
@@ -1311,7 +1348,7 @@ $directions: top right bottom left;
 		}
 	}
 	.react-datepicker__day--outside-month {
-		background-color: darken($dark-bg, 3) !important;
+		background-color: darken($dark-bg, 2) !important;
 		color: $border-color !important;
 	}
 	.react-datepicker__day--today {
@@ -1343,18 +1380,19 @@ $directions: top right bottom left;
  %backdrop-fg {
 	border-radius: 0px !important;
 	background-color: $dark-bg !important;
+	color: $white;
 }
 
 /* Select */
 .Select-value {
-	background-color: darken($dark-bg, 4);
+	background-color: darken($dark-bg, 2);
 	border: 1px solid $border-color !important;
 }
 .Select-menu-outer {
 	border-color: $border-color;
 }
 .Select-option {
-	background: darken($dark-bg, 4) !important;
+	background: darken($dark-bg, 2) !important;
 }
 .Select-option.is-focused {
 	@extend %hover-item;
@@ -1372,10 +1410,6 @@ $directions: top right bottom left;
 	input[type=text] {
 		background-color: rgba($bg-color, 0.8);
 	}
-	.cardPrimaryEditable-2IQ7-V {
-		background-color: rgba(black, 0.1);
-		border-color: $border-color;
-	}	
 }
 
 /* Create Invite */
@@ -1474,4 +1508,56 @@ $directions: top right bottom left;
 /* Delete Message Confirmation */
 .message-25xg43 {
 	background-color: $bg-color !important;
+}
+
+/* 8.2 Settings */
+.ui-standard-sidebar-view .sidebar-region  {
+	background: darken($dark-bg, 3) !important;
+}
+
+.header-1-f9X5 {
+	color: $skyblue !important;
+}
+
+.side-2nYO0F .itemSelected-3XxAMf {
+	@extend %hover-item;
+}
+
+.ui-standard-sidebar-view .content-region  {
+	background: $dark-bg !important;
+	h2 {
+		color: $accent-color !important;
+	}
+	h5 {
+		color: $skyblue !important;
+	}
+}
+
+.theme-dark .cardPrimary-ZVL9Jr,
+.theme-light .cardPrimary-ZVL9Jr,
+.theme-light .cardPrimaryEditable-2IQ7-V,
+.theme-dark .cardPrimaryEditable-2IQ7-V {
+	background-color: rgba(black, 0.1);
+	border-color: $border-color;
+}
+
+.userSettingsVoice-TvPQ80 .previewOverlay-2vHj3H {
+	background-color: darken($dark-bg, 2) !important;
+	border-color: $border-color !important;
+}
+
+/* games */
+.user-settings-games .game {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+
+.card-11ynQk:before,
+.button-1qrA-N {
+	background-color: $bg-color !important;
+	border-color: $border-color !important;
+}
+.user-settings-games .game-name-input:focus,
+.user-settings-games .game-name-input:hover {
+	background-color: darken($dark-bg, 2) !important;
 }
