@@ -2,7 +2,7 @@
  * please refer to the README for instructions
  * 
  * Name: Bludiscord
- * Date: 2018-02-24
+ * Date: 2018-02-26
  * Author: Itokatsu
  * Repo: https://github.com/Itokatsu/bludiscord
 */
@@ -760,7 +760,7 @@ code.inline {
     color: #b38f63 !important; }
   [class^=topSection] button {
     background-color: #3b6082 !important;
-    color: #dcddde; }
+    color: #dcddde !important; }
     [class^=topSection] button:hover {
       background-color: #286195 !important; }
 
@@ -1197,4 +1197,4 @@ code.inline {
 .user-settings-games .game-name-input:hover {
   background-color: #0b1f2f !important; }
 
-/*# sourceMappingURL=sassbd.css.map */
+/*# sourceMappingURL=bludiscord.css.map */
