@@ -814,24 +814,24 @@ code.inline {
 /** 
  4 Member List
 **/
-.channel-members {
+.members-1bid1J {
 	background-color: $bg-color !important;
 }
 .channel-members-loading {
 	background-color: $dark-bg !important;
 }
 
-.channel-members .member:hover,
-.channel-members .member.popout-open {
+.members-1bid1J .member-2FrNV0:hover .content-3JzEqq,
+.members-1bid1J .member-2FrNV0.popout-open .content-3JzEqq{
 	background: $hover-bg !important;
 }
 
 /* Role */
-.channel-members h2 {
+.membersGroup-3_dP5E {
 	color: $skyblue !important;
-	padding-bottom: 10px !important;
 	position: relative;
-	@include underline($skyblue)
+	padding-bottom: 10px !important;
+	font-weight: bolder;
 }
 
 /* 4.1 Usercard */
