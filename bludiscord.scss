@@ -153,13 +153,14 @@ $hover-color: #b9bbbe;
 }
 
 /* 0.1 Window decorations */
-.appMount-14L89u {
+.appMount-3VJmYg {
 	background-color: $dark-bg;
 	box-sizing: border-box !important;
 	border: 2px solid $border-color !important;
 }
 /* 0.2 Avatars */
-.avatar-large, .avatar-profile, .avatar-small, .avatar-xlarge, .avatar-xsmall, .avatar-xxlarge {
+.avatar-large, .avatar-profile, .avatar-small, .avatar-xlarge, .avatar-xsmall, .avatar-xxlarge,
+.avatarDefault-35WC3R, .avatarSpeaking-1wJCNq {
 	@extend %avatars;
 }
 /* 0.3 Notice */
@@ -408,15 +409,21 @@ $guild-accent-color: $accent-color2;
  2 Channel List 
  **/
 $channelp-bg: darken($bg-color, 2);
-.channels-3g2vYe {
+.channels-Ie2l6A {
 	background-color: $channelp-bg !important;
+	[class^=content] {
+		border-left: 6px solid transparent;
+	}
+	[class^=unread-] + [class^=content] {
+		border-left-color: $skyblue !important;
+	}
 }
-.container-RYiLUQ {
+.container-PNkimc {
 	border-radius: 0px;
 	background-color: transparent !important;
 }
 /* 2.1 Header */
-.header-1tSljs {
+.header-2o-2hj {
 	background-color: darken($accent-color2,5) !important;
 	min-height: 32px;
 	height: 32px;
@@ -436,16 +443,17 @@ $channelp-bg: darken($bg-color, 2);
 
 
 /* 2.2 Categories */
-.iconDefault-xzclSQ, .nameDefault-Lnjrwm {
+.iconDefault-3Gr8d2, .nameDefault-2DI02H {
 	color: $skyblue;
 }
-.iconHovered-3PRzOR, .nameHovered-1YFSWq,  {
+
+.iconHovered-3PRzOR, .nameHovered-1gxhWH,  {
 	color: saturate($skyblue, 60);
 }
-.iconCollapsed-1INdMX, .nameCollapsed-3_ChMu {
+.iconCollapsed-3hFp_8, .nameCollapsed-34uFWo {
 	color: $accent-color2;
 }
-.iconHoveredCollapsed-jNYgOD, .nameHoveredCollapsed-2c-EHI {
+.iconHoveredCollapsed-jNYgOD, .nameHoveredCollapsed-2orEWB {
 	color: saturate($accent-color2, 60)
 }
 .icon-2WU8ha {
@@ -456,23 +464,19 @@ $channelp-bg: darken($bg-color, 2);
 	}
 }
 /* Underline */
-.containerDefault-1bbItS:first-child {
+.containerDefault-3GGEv_:first-child {
 	@include underline($accent-color2);
 }
 
 
 /* 2.3 Channels */
-.channels-3g2vYe [class^=content] {
-	border-left: 6px solid transparent;
-}
-
 /* 2.3.1 Current Channel */
-.contentSelectedText-3j5CXt {
+[class^=contentSelectedText] {
 	background-color: $accent-color2 !important;
 	border-left-color: $accent-color !important;
 }
-.nameSelectedText-32NDX5, 
-.nameSelectedVoice-XpjYTw {
+[class^=nameSelectedText], 
+[class^=nameSelectedVoice] {
 	color: $accent-color;
 }
 
@@ -481,8 +485,8 @@ $channelp-bg: darken($bg-color, 2);
 }
 
 /* 2.3.2 Icons */
-.colorSelectedText-3YhFC6,
-.colorSelectedVoice-ieXC3Z {
+.colorSelectedText-1y4Wvs,
+.colorSelectedVoice-Xcb_9R {
 	.foreground-2zy1hc {
 		opacity: 1;
 	}
@@ -511,10 +515,11 @@ $channelp-bg: darken($bg-color, 2);
 .nameHoveredVoice-TIoHRJ {
 	color: #b9bbbe;
 }
-.avatarDefault-3jtQoc, .avatarSpeaking-3teDH6 {
+.avatarDefault-3jtQoc, .avatarSpeaking-1wJCNq {
 	@extend %avatars;
 }
-.avatarSpeaking-3teDH6 {
+
+.avatarSpeaking-1wJCNq {
 	box-shadow: none;
 	border-color: $accent-color;
 }
@@ -538,13 +543,14 @@ $channelp-bg: darken($bg-color, 2);
 }
 
 /* Voice Channel Capacity */
-.wrapper-2ldvyE {
+.wrapper-2NJDcI {
 	background-color: $dark-bg;
 }
 
 /* 2.4 Footer Cards */
-.container-3lnMWU, 
-.container-iksrDt {
+.container-2Thooq,
+/* Voice Card */
+.container-1UB9sr {
 	background-color: transparent;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -558,7 +564,7 @@ $channelp-bg: darken($bg-color, 2);
 .unread-2TDDFN {
 	background-color: darken($skyblue,30) !important;
 }
-.unread-23Kvxk {
+.unread-1Dp-OI {
 	display: none;
 }
 .channels-3g2vYe [class^=unread-] + [class^=content] {
@@ -573,7 +579,7 @@ $channelp-bg: darken($bg-color, 2);
 	}
 }
 /* 2.5.2 Highlight badge */
-.wrapper-2xO9RX {
+.wrapper-232cHJ {
 	@extend %hl-badge;
 }
 
@@ -586,7 +592,7 @@ $channelp-bg: darken($bg-color, 2);
  3 Chat 
  **/
 /* 3.1 Header */
-.chat .title-qAcLxz {
+.chat .title-3qD0b- {
 	background-color: $channelp-bg;
 	min-height: 32px;
 	height: 32px;
@@ -595,12 +601,14 @@ $channelp-bg: darken($bg-color, 2);
 
 /* 3.1.1 Channel Title Text */
 .channelIcon-1KtcMW, 
-.channelName-1G03vu {
+.channelName-3stJzi, 
+.groupDM-3qU0Ks, 
+.groupDMManaged-1GyXtq {
 	color: $skyblue !important;
 }
 
 /* 3.1.2 Icons */
-.iconForeground-2c7s3m,
+.iconForeground-3y9f0B,
 .title-2Ul_Rx {
 	color: $skyblue !important;
 }
@@ -814,16 +822,15 @@ code.inline {
 /** 
  4 Member List
 **/
-.members-1bid1J {
+.members-1998pB {
 	background-color: $bg-color !important;
+	.member-2FrNV0:hover .content-3JzEqq,
+	.member-2FrNV0.popout-open .content-3JzEqq{
+		background: $hover-bg !important;
+	}
 }
 .channel-members-loading {
 	background-color: $dark-bg !important;
-}
-
-.members-1bid1J .member-2FrNV0:hover .content-3JzEqq,
-.members-1bid1J .member-2FrNV0.popout-open .content-3JzEqq{
-	background: $hover-bg !important;
 }
 
 /* Role */
@@ -837,19 +844,19 @@ code.inline {
 /* 4.1 Usercard */
 
 /* Avatars */
-.image-EVRGPw,
-.avatarHint-2ohlkz {
+.image-33JSyf,
+.avatarHint-1qgaV3 {
 	@extend %avatars;
 	mask: none!important;
 	-webkit-mask: none!important;
 	margin: 0px;
 }
 
-.userPopout-11hFKo {
+[class^=userPopout] {
 	@extend %popout;
 
 	/* 4.1.1 Header */
-	.header-3budic {
+	.headerNormal-T_seeN {
 		background-color: inherit !important;
 		border-bottom: 1px solid $border-color;
 		.headerName-2N8Pdz {
@@ -1065,14 +1072,18 @@ code.inline {
 .private-channels .channel.selected {
 	a { 
 		color: $accent-color !important;
-		@extend .contentSelectedText-3j5CXt;
+		background-color: $accent-color2 !important;
+		border-left-color: $accent-color !important;
 		.channel-name {
 			font-weight: 600;
 			color: inherit;
 		}
 	}
 	/* no change */
-	&:hover a {	@extend .contentSelectedText-3j5CXt; }
+	&:hover a {		
+		background-color: $accent-color2 !important;
+		border-left-color: $accent-color !important;
+	}
 }
 
 /* 6.1.3 Search Button */

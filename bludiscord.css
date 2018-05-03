@@ -98,13 +98,14 @@
 /**
  0 Generic stuff 
  **/
-.avatar-1BXaQj,
-.avatarHint-2ohlkz, .iconActiveLarge-3wrcgc, .image-EVRGPw, .avatarDefault-3jtQoc, .avatarSpeaking-3teDH6, .btn-download-apps, .guilds-wrapper .guilds-error, .guilds-wrapper .guilds-add, .guild-inner a, .guilds-wrapper .guilds .guild-placeholder, .avatar-large, .avatar-profile, .avatar-small, .avatar-xlarge, .avatar-xsmall, .avatar-xxlarge {
+.avatar-1BXaQj, .image-33JSyf,
+.avatarHint-1qgaV3, .iconActiveLarge-3wrcgc, .image-EVRGPw, .avatarDefault-3jtQoc, .btn-download-apps, .guilds-wrapper .guilds-error, .guilds-wrapper .guilds-add, .guild-inner a, .guilds-wrapper .guilds .guild-placeholder, .avatar-large, .avatar-profile, .avatar-small, .avatar-xlarge, .avatar-xsmall, .avatar-xxlarge,
+.avatarDefault-35WC3R, .avatarSpeaking-1wJCNq {
   border-radius: 15% !important;
   border: 2px solid #364959;
 }
 
-.wrapper-2xO9RX, .badge {
+.wrapper-232cHJ, .badge {
   background-color: #c92c7d !important;
   color: #0c2437 !important;
   bottom: -6px !important;
@@ -113,7 +114,7 @@
 }
 
 .search-popout, .popout .themed-popout, .popout section, .popout header, .quickSelectPopout-3KoYgk, .popout .menu-3BZuDT, .contextMenu-uoJTbz, .tooltip,
-.small-popout-box, .userPopout-11hFKo, .diversitySelector-O3ea2c .popout-2lja3I, .emojiPicker-3g68GS {
+.small-popout-box, [class^=userPopout], .diversitySelector-O3ea2c .popout-2lja3I, .emojiPicker-3g68GS {
   background-color: #0c2437 !important;
   border: 1px solid #364959;
 }
@@ -126,7 +127,7 @@
 }
 
 /* 0.1 Window decorations */
-.appMount-14L89u {
+.appMount-3VJmYg {
   background-color: #0c2437;
   box-sizing: border-box !important;
   border: 2px solid #364959 !important;
@@ -362,17 +363,23 @@ hr {
 /**
  2 Channel List 
  **/
-.channels-3g2vYe {
+.channels-Ie2l6A {
   background-color: #102f48 !important;
 }
+.channels-Ie2l6A [class^=content] {
+  border-left: 6px solid transparent;
+}
+.channels-Ie2l6A [class^=unread-] + [class^=content] {
+  border-left-color: #6897bd !important;
+}
 
-.container-RYiLUQ {
+.container-PNkimc {
   border-radius: 0px;
   background-color: transparent !important;
 }
 
 /* 2.1 Header */
-.header-1tSljs {
+.header-2o-2hj {
   background-color: #335370 !important;
   min-height: 32px;
   height: 32px;
@@ -392,19 +399,19 @@ hr {
 }
 
 /* 2.2 Categories */
-.iconDefault-xzclSQ, .nameDefault-Lnjrwm {
+.iconDefault-3Gr8d2, .nameDefault-2DI02H {
   color: #6897bd;
 }
 
-.iconHovered-3PRzOR, .nameHovered-1YFSWq {
+.iconHovered-3PRzOR, .nameHovered-1gxhWH {
   color: #279efe;
 }
 
-.iconCollapsed-1INdMX, .nameCollapsed-3_ChMu {
+.iconCollapsed-3hFp_8, .nameCollapsed-34uFWo {
   color: #3b6082;
 }
 
-.iconHoveredCollapsed-jNYgOD, .nameHoveredCollapsed-2c-EHI {
+.iconHoveredCollapsed-jNYgOD, .nameHoveredCollapsed-2orEWB {
   color: #0262bb;
 }
 
@@ -417,11 +424,11 @@ hr {
 }
 
 /* Underline */
-.containerDefault-1bbItS:first-child {
+.containerDefault-3GGEv_:first-child {
   padding-bottom: 6px;
   margin-bottom: 6px;
 }
-.containerDefault-1bbItS:first-child:after {
+.containerDefault-3GGEv_:first-child:after {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -431,28 +438,24 @@ hr {
 }
 
 /* 2.3 Channels */
-.channels-3g2vYe [class^=content] {
-  border-left: 6px solid transparent;
-}
-
 /* 2.3.1 Current Channel */
-.contentSelectedText-3j5CXt, .private-channels .channel.selected:hover a, .private-channels .channel.selected a {
+[class^=contentSelectedText] {
   background-color: #3b6082 !important;
   border-left-color: #d69240 !important;
 }
 
-.nameSelectedText-32NDX5,
-.nameSelectedVoice-XpjYTw {
+[class^=nameSelectedText],
+[class^=nameSelectedVoice] {
   color: #d69240;
 }
 
 /* 2.3.2 Icons */
-.colorSelectedText-3YhFC6,
-.colorSelectedVoice-ieXC3Z {
+.colorSelectedText-1y4Wvs,
+.colorSelectedVoice-Xcb_9R {
   color: #d69240;
 }
-.colorSelectedText-3YhFC6 .foreground-2zy1hc,
-.colorSelectedVoice-ieXC3Z .foreground-2zy1hc {
+.colorSelectedText-1y4Wvs .foreground-2zy1hc,
+.colorSelectedVoice-Xcb_9R .foreground-2zy1hc {
   opacity: 1;
 }
 
@@ -481,7 +484,7 @@ hr {
   color: #b9bbbe;
 }
 
-.avatarSpeaking-3teDH6 {
+.avatarSpeaking-1wJCNq {
   box-shadow: none;
   border-color: #d69240;
 }
@@ -501,13 +504,13 @@ hr {
 }
 
 /* Voice Channel Capacity */
-.wrapper-2ldvyE {
+.wrapper-2NJDcI {
   background-color: #0c2437;
 }
 
 /* 2.4 Footer Cards */
-.container-3lnMWU,
-.container-iksrDt {
+.container-2Thooq,
+.container-1UB9sr {
   background-color: transparent;
   margin-left: 10px;
   margin-right: 10px;
@@ -522,7 +525,7 @@ hr {
   background-color: #2b4961 !important;
 }
 
-.unread-23Kvxk {
+.unread-1Dp-OI {
   display: none;
 }
 
@@ -548,7 +551,7 @@ hr {
  3 Chat 
  **/
 /* 3.1 Header */
-.chat .title-qAcLxz {
+.chat .title-3qD0b- {
   background-color: #102f48;
   min-height: 32px;
   height: 32px;
@@ -557,12 +560,14 @@ hr {
 
 /* 3.1.1 Channel Title Text */
 .channelIcon-1KtcMW,
-.channelName-1G03vu {
+.channelName-3stJzi,
+.groupDM-3qU0Ks,
+.groupDMManaged-1GyXtq {
   color: #6897bd !important;
 }
 
 /* 3.1.2 Icons */
-.iconForeground-2c7s3m,
+.iconForeground-3y9f0B,
 .title-2Ul_Rx {
   color: #6897bd !important;
 }
@@ -783,17 +788,16 @@ code.inline {
 /** 
  4 Member List
 **/
-.members-1bid1J {
+.members-1998pB {
   background-color: #123550 !important;
+}
+.members-1998pB .member-2FrNV0:hover .content-3JzEqq,
+.members-1998pB .member-2FrNV0.popout-open .content-3JzEqq {
+  background: #355674 !important;
 }
 
 .channel-members-loading {
   background-color: #0c2437 !important;
-}
-
-.members-1bid1J .member-2FrNV0:hover .content-3JzEqq,
-.members-1bid1J .member-2FrNV0.popout-open .content-3JzEqq {
-  background: #355674 !important;
 }
 
 /* Role */
@@ -806,55 +810,55 @@ code.inline {
 
 /* 4.1 Usercard */
 /* Avatars */
-.image-EVRGPw,
-.avatarHint-2ohlkz {
+.image-33JSyf,
+.avatarHint-1qgaV3 {
   mask: none !important;
   -webkit-mask: none !important;
   margin: 0px;
 }
 
-.userPopout-11hFKo {
+[class^=userPopout] {
   /* 4.1.1 Header */
   /* 4.1.2 Activity */
   /* 4.1.3 Body */
   /* Roles */
 }
-.userPopout-11hFKo .header-3budic {
+[class^=userPopout] .headerNormal-T_seeN {
   background-color: inherit !important;
   border-bottom: 1px solid #364959;
 }
-.userPopout-11hFKo .header-3budic .headerName-2N8Pdz {
+[class^=userPopout] .headerNormal-T_seeN .headerName-2N8Pdz {
   font-weight: bolder;
   color: #d69240 !important;
 }
-.userPopout-11hFKo .header-3budic .username,
-.userPopout-11hFKo .header-3budic .discriminator {
+[class^=userPopout] .headerNormal-T_seeN .username,
+[class^=userPopout] .headerNormal-T_seeN .discriminator {
   color: #d69240 !important;
 }
-.userPopout-11hFKo .activity-3NviKQ {
+[class^=userPopout] .activity-3NviKQ {
   border-top: 1px solid #364959;
   background-color: #0e2a3f;
 }
-.userPopout-11hFKo .activity-3NviKQ .headerText-2CVBxK {
+[class^=userPopout] .activity-3NviKQ .headerText-2CVBxK {
   color: #6897bd !important;
 }
-.userPopout-11hFKo .activity-3NviKQ button {
+[class^=userPopout] .activity-3NviKQ button {
   background-color: #3b6082;
   color: #cccccc;
   border: 1px solid #364959 !important;
 }
-.userPopout-11hFKo .activity-3NviKQ button:hover {
+[class^=userPopout] .activity-3NviKQ button:hover {
   background-color: #2d6190 !important;
 }
-.userPopout-11hFKo .body-3ljq11,
-.userPopout-11hFKo .footer-2wFs91 {
+[class^=userPopout] .body-3ljq11,
+[class^=userPopout] .footer-2wFs91 {
   background-color: inherit !important;
 }
-.userPopout-11hFKo .bodyTitle-18hsd9 {
+[class^=userPopout] .bodyTitle-18hsd9 {
   color: #b38f63 !important;
 }
-.userPopout-11hFKo .role-3rahR_,
-.userPopout-11hFKo button {
+[class^=userPopout] .role-3rahR_,
+[class^=userPopout] button {
   border-radius: 0px;
 }
 
@@ -1022,11 +1026,18 @@ code.inline {
 }
 .private-channels .channel.selected a {
   color: #d69240 !important;
+  background-color: #3b6082 !important;
+  border-left-color: #d69240 !important;
 }
 .private-channels .channel.selected a .channel-name {
   font-weight: 600;
   color: inherit;
 }
+.private-channels .channel.selected:hover a {
+  background-color: #3b6082 !important;
+  border-left-color: #d69240 !important;
+}
+
 /* 6.1.3 Search Button */
 .private-channels .search-bar {
   height: 32px;
