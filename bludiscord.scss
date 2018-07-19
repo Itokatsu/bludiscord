@@ -251,9 +251,8 @@ $guild-accent-color: $accent-color2;
 .guild-inner {
 	overflow: inherit !important;
 	background-color: $dark-bg !important;
-	a {
+	.iconSizeLarge-161qtT {
 		@extend %guild-box;
-		background-size: $guild-size $guild-size !important;
 		box-sizing: border-box;
 		color: $guild-accent-color !important;
 		position: relative;
@@ -261,10 +260,10 @@ $guild-accent-color: $accent-color2;
 }
 
 /* 1.2.2 Direct Messages DMs */
-.guild:first-child {
+.guild:first-child a {
 	width: $guild-size !important;
 	height: $guild-size !important;
-	.guild-inner a {
+	.home-icon {
 		border-radius: 5px !important;
 		background-color: $guild-accent-color !important;
 		&:hover {
@@ -348,7 +347,7 @@ $guild-accent-color: $accent-color2;
 }
 .guild.selected,
 .guild:first-child.active {
-	a {
+	.guild-icon {
 		left: -3px;
 		top: -3px;
 		box-sizing: content-box;

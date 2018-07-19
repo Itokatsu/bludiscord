@@ -99,7 +99,7 @@
  0 Generic stuff 
  **/
 .avatar-1BXaQj, .image-33JSyf,
-.avatarHint-1qgaV3, .iconActiveLarge-3wrcgc, .image-EVRGPw, .avatarDefault-3jtQoc, .btn-download-apps, .guilds-wrapper .guilds-error, .guilds-wrapper .guilds-add, .guild-inner a, .guilds-wrapper .guilds .guild-placeholder, .avatar-large, .avatar-profile, .avatar-small, .avatar-xlarge, .avatar-xsmall, .avatar-xxlarge,
+.avatarHint-1qgaV3, .iconActiveLarge-3wrcgc, .image-EVRGPw, .avatarDefault-3jtQoc, .btn-download-apps, .guilds-wrapper .guilds-error, .guilds-wrapper .guilds-add, .guild-inner .iconSizeLarge-161qtT, .guilds-wrapper .guilds .guild-placeholder, .avatar-large, .avatar-profile, .avatar-small, .avatar-xlarge, .avatar-xsmall, .avatar-xxlarge,
 .avatarDefault-35WC3R, .avatarSpeaking-1wJCNq {
   border-radius: 15% !important;
   border: 2px solid #364959;
@@ -176,14 +176,14 @@ hr {
  1 Guild List 
  **/
 /* 1.0 Guild Variables */
-.btn-download-apps, .guilds-wrapper .guilds-error, .guilds-wrapper .guilds-add, .guild-inner a, .guilds-wrapper .guilds .guild-placeholder {
+.btn-download-apps, .guilds-wrapper .guilds-error, .guilds-wrapper .guilds-add, .guild-inner .iconSizeLarge-161qtT, .guilds-wrapper .guilds .guild-placeholder {
   background-color: #0c2437 !important;
   width: 39px !important;
   height: 39px !important;
   line-height: 35.1px !important;
   border-color: #3b6082 !important;
 }
-.btn-download-apps:hover, .guilds-wrapper .guilds-error:hover, .guilds-wrapper .guilds-add:hover, .guild-inner a:hover, .guilds-wrapper .guilds .guild-placeholder:hover {
+.btn-download-apps:hover, .guilds-wrapper .guilds-error:hover, .guilds-wrapper .guilds-add:hover, .guild-inner .iconSizeLarge-161qtT:hover, .guilds-wrapper .guilds .guild-placeholder:hover {
   border-color: #bf9057 !important;
   background-color: #11324c !important;
 }
@@ -216,27 +216,26 @@ hr {
   overflow: inherit !important;
   background-color: #0c2437 !important;
 }
-.guild-inner a {
-  background-size: 39px 39px !important;
+.guild-inner .iconSizeLarge-161qtT {
   box-sizing: border-box;
   color: #3b6082 !important;
   position: relative;
 }
 
 /* 1.2.2 Direct Messages DMs */
-.guild:first-child {
+.guild:first-child a {
   width: 39px !important;
   height: 39px !important;
 }
-.guild:first-child .guild-inner a {
+.guild:first-child a .home-icon {
   border-radius: 5px !important;
   background-color: #3b6082 !important;
 }
-.guild:first-child .guild-inner a:hover {
+.guild:first-child a .home-icon:hover {
   border-color: #bf9057 !important;
   background-color: #bf9057 !important;
 }
-.guild:first-child .friends-icon {
+.guild:first-child a .friends-icon {
   width: 39px !important;
   height: 39px !important;
   background-size: 28px 25px;
@@ -308,8 +307,8 @@ hr {
   display: none !important;
 }
 
-.guild.selected a,
-.guild:first-child.active a {
+.guild.selected .guild-icon,
+.guild:first-child.active .guild-icon {
   left: -3px;
   top: -3px;
   box-sizing: content-box;
@@ -1462,3 +1461,5 @@ code.inline {
 .user-settings-games .game-name-input:hover {
   background-color: #0b1f2f !important;
 }
+
+/*# sourceMappingURL=bludiscord.css.map */
